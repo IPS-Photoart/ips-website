@@ -1,0 +1,17 @@
+<h2>Preview Certificate</h2>
+
+<p>Preview your certificate before final download.</p>
+
+<input type="text" id="code" placeholder="IPS-2026-000010">
+<button onclick="preview()">Preview</button>
+
+<script>
+function preview() {
+  const code = document.getElementById("code").value.trim();
+  if (!code) return alert("Enter certificate code");
+  window.open(
+    "http://127.0.0.1:8000/certificate/" + code + "/preview",
+    "_blank"
+  );
+}
+</script>
