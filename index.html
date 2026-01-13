@@ -36,9 +36,9 @@ nav a {
 
 nav a:hover { text-decoration: underline; }
 
+/* FIXED BANNER */
 .banner {
-    background-image: url("assets/banner.jpg");
-}
+    background-image: url("assets/img/banner.jpg");
     background-size: cover;
     background-position: center;
     height: 320px;
@@ -101,6 +101,34 @@ nav a:hover { text-decoration: underline; }
     margin-bottom: 10px;
 }
 
+.workflow {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.workflow div {
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    background-color: #fafafa;
+    font-size: 14px;
+}
+
+.motto {
+    background-color: #f3f6f9;
+    padding: 40px 20px;
+    margin-top: 60px;
+}
+
+.motto p {
+    max-width: 900px;
+    margin: auto;
+    font-size: 16px;
+}
+
 footer {
     background-color: #0f2a44;
     color: #ffffff;
@@ -131,60 +159,86 @@ footer {
     </div>
 </div>
 
+<!-- FIXED LOGO -->
 <div class="logo-section">
-    <img src="https://via.placeholder.com/200x200.png?text=IPS+LOGO" alt="IPS Logo">
+    <img src="https://ips-photoart.github.io/ips-website/assets/img/logo.png" alt="IPS Logo">
 </div>
 
+<!-- ABOUT -->
+<div class="section">
+    <h2>About Our Certification</h2>
+    <p>
+        The Indian Photographic Society is committed to promoting photographic excellence through structured assessment
+        and credible certification. Our programs are designed to evaluate fundamental and professional competencies in
+        photography using a transparent, merit-based examination system.
+    </p>
+</div>
+
+<!-- CERTIFICATES -->
 <div class="section">
     <h2>Certificates Offered</h2>
 
     <div class="card-grid">
 
-        <!-- LEVEL 1 -->
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f" alt="Basic photography practice">
+            <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f" alt="">
             <div class="card-content">
                 <h3>Level 1 – Basic Photography</h3>
                 <p>30 minutes · 25 MCQs</p>
-                <p>Exposure triangle, ISO, aperture, shutter speed.</p>
                 <p><strong>Fee:</strong> ₹199</p>
             </div>
         </div>
 
-        <!-- LEVEL 2 -->
         <div class="card">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDl7ClFF_ucyMacbv8TA7l1tK08nMYKn9aRg&s" alt="Composition and lighting">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDl7ClFF_ucyMacbv8TA7l1tK08nMYKn9aRg&s" alt="">
             <div class="card-content">
                 <h3>Level 2 – Intermediate Composition & Lighting</h3>
-                <p>20 MCQs + 5 Short Answers (AI graded)</p>
-                <p>High/low key, framing, positive & negative space.</p>
+                <p>20 MCQs + 5 Short Answers</p>
                 <p><strong>Fee:</strong> ₹199</p>
             </div>
         </div>
 
-        <!-- LEVEL 3 -->
         <div class="card">
-            <img src="https://i.ytimg.com/vi/HdybTcUeY2k/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDwvCuGlGlt64g0UMJ_aip8Xj0RgQ" alt="Professional photography workflow">
+            <img src="https://i.ytimg.com/vi/HdybTcUeY2k/hq720.jpg" alt="">
             <div class="card-content">
                 <h3>Level 3 – Professional Photography Fundamentals</h3>
                 <p>Completion Certificate</p>
-                <p>Advanced MCQs + analytical short answers.</p>
-                <p><strong>Fee:</strong> ₹199 or ₹500 (all levels)</p>
+                <p><strong>Fee:</strong> ₹199 / ₹500 (all)</p>
             </div>
         </div>
 
-        <!-- LEVEL 4 -->
         <div class="card">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0m8mywGeuXAUqqYEy3fZQRT9ybzXutEMpNg&s">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0m8mywGeuXAUqqYEy3fZQRT9ybzXutEMpNg&s" alt="">
             <div class="card-content">
                 <h3>Level 4 – Certificate in Indian Wedding Photography</h3>
-                <p>Focused on Indian & Bengali wedding aesthetics.</p>
-                <p>Portraits, rituals, candid moments, lighting control.</p>
-                <p><strong>Fee:</strong> ₹300 (separate certification)</p>
+                <p><strong>Fee:</strong> ₹300</p>
             </div>
         </div>
 
     </div>
+</div>
+
+<!-- WORKFLOW -->
+<div class="section">
+    <h2>Certification Workflow</h2>
+    <div class="workflow">
+        <div>Appear in Online Examination</div>
+        <div>Result & Certificate Code Issued</div>
+        <div>Preview Certificate (Watermarked)</div>
+        <div>Payment Confirmation</div>
+        <div>Download Final Certificate</div>
+    </div>
+</div>
+
+<!-- MOTTO -->
+<div class="motto">
+    <p>
+        <strong>Our Motto</strong><br><br>
+        The Indian Photographic Society recognises photography not merely as a technical skill, but as an expressive art
+        and a social responsibility. We are committed to maintaining integrity in certification, protecting the
+        credibility of photographers, and promoting ethical artistic practices that contribute meaningfully to society,
+        culture, and visual documentation of our times.
+    </p>
 </div>
 
 <footer>
