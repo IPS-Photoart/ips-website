@@ -9,10 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;600&display=swap" rel="stylesheet">
 
     <style>
-/* ---------- GLOBAL ---------- */
-* {
-    box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
     margin: 0;
@@ -22,12 +19,8 @@ body {
     line-height: 1.6;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
+a { text-decoration: none; color: inherit; }
 
-/* ---------- NAV ---------- */
 nav {
     background-color: #0f2a44;
     padding: 14px 0;
@@ -41,11 +34,8 @@ nav a {
     font-weight: 500;
 }
 
-nav a:hover {
-    text-decoration: underline;
-}
+nav a:hover { text-decoration: underline; }
 
-/* ---------- BANNER ---------- */
 .banner {
     background-image: url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee");
     background-size: cover;
@@ -62,32 +52,12 @@ nav a:hover {
     padding: 40px;
 }
 
-.banner-text h1 {
-    font-size: 34px;
-    margin: 0 0 10px 0;
-}
+.banner-text h1 { font-size: 34px; margin-bottom: 10px; }
+.banner-text p { font-size: 17px; max-width: 700px; }
 
-.banner-text p {
-    font-size: 17px;
-    max-width: 700px;
-    margin: 0;
-}
+.logo-section { text-align: center; margin: 30px 0 10px; }
+.logo-section img { width: 140px; }
 
-/* ---------- LOGO ---------- */
-.logo-section {
-    display: block;
-    text-align: center;
-    margin: 30px auto 10px auto;
-}
-
-.logo-section img {
-    display: inline-block;
-    width: 140px;
-    max-width: 90%;
-    height: auto;
-}
-
-/* ---------- SECTIONS ---------- */
 .section {
     max-width: 1100px;
     margin: 40px auto;
@@ -100,15 +70,11 @@ nav a:hover {
     margin-bottom: 15px;
 }
 
-.section p {
-    font-size: 15px;
-    color: #333;
-}
+.section p { font-size: 15px; }
 
-/* ---------- CARDS ---------- */
 .card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 25px;
     margin-top: 30px;
 }
@@ -126,48 +92,14 @@ nav a:hover {
     object-fit: cover;
 }
 
-.card-content {
-    padding: 18px;
-}
+.card-content { padding: 18px; }
 
 .card-content h3 {
-    font-size: 18px;
+    font-size: 17px;
     color: #0f2a44;
     margin-bottom: 10px;
 }
 
-/* ---------- WORKFLOW ---------- */
-.workflow {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 20px;
-    text-align: center;
-    margin-top: 30px;
-}
-
-.workflow div {
-    padding: 20px;
-    border: 1px solid #e0e0e0;
-    border-radius: 6px;
-    background-color: #fafafa;
-    font-size: 14px;
-}
-
-/* ---------- MOTTO ---------- */
-.motto {
-    background-color: #f3f6f9;
-    padding: 40px 20px;
-    margin-top: 60px;
-}
-
-.motto p {
-    max-width: 900px;
-    margin: auto;
-    font-size: 16px;
-    color: #222;
-}
-
-/* ---------- FOOTER ---------- */
 footer {
     background-color: #0f2a44;
     color: #ffffff;
@@ -181,102 +113,83 @@ footer {
 
 <body>
 
-    <!-- NAV -->
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="course.html">Course Info</a>
-        <a href="verify.html">Verify Certificate</a>
-        <a href="preview.html">Preview Certificate</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="course.html">Course Info</a>
+    <a href="verify.html">Verify Certificate</a>
+    <a href="preview.html">Preview Certificate</a>
+    <a href="contact.html">Contact</a>
+</nav>
 
-    <!-- BANNER -->
-    <div class="banner">
-        <div class="banner-overlay">
-            <div class="banner-text">
-                <h1>Indian Photographic Society</h1>
-                <p>
-                    Professional Certification in Photography · Structured Assessment · Digitally Verifiable Certificates
-                </p>
-            </div>
+<div class="banner">
+    <div class="banner-overlay">
+        <div class="banner-text">
+            <h1>Indian Photographic Society</h1>
+            <p>Professional Certification in Photography · Digitally Verifiable · Client-Credible</p>
         </div>
     </div>
+</div>
 
-    <!-- LOGO -->
-    <div class="logo-section">
-        <img src="https://via.placeholder.com/200x200.png?text=IPS+LOGO" alt="IPS Logo">
-    </div>
+<div class="logo-section">
+    <img src="https://via.placeholder.com/200x200.png?text=IPS+LOGO" alt="IPS Logo">
+</div>
 
-    <!-- INTRO -->
-    <div class="section">
-        <h2>About Our Certification</h2>
-        <p>
-            The Indian Photographic Society is committed to promoting photographic excellence through structured assessment
-            and credible certification. Our programs are designed to evaluate fundamental and professional competencies
-            in photography using a transparent, merit-based examination system.
-        </p>
-    </div>
+<div class="section">
+    <h2>Certificates Offered</h2>
 
-    <!-- CERTIFICATES -->
-    <div class="section">
-        <h2>Certificates Offered</h2>
+    <div class="card-grid">
 
-        <div class="card-grid">
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32" alt="">
-                <div class="card-content">
-                    <h3>Professional Photography Fundamentals</h3>
-                    <p>
-                        Online MCQ-based assessment covering exposure, composition, optics, and professional practices.
-                    </p>
-                    <p><strong>Pass Marks:</strong> 50%</p>
-                    <p><strong>Certificate:</strong> Digitally verifiable with QR & code</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7" alt="">
-                <div class="card-content">
-                    <h3>Advanced Visual Composition</h3>
-                    <p>
-                        Evaluation of artistic understanding, framing, lighting, and visual storytelling.
-                    </p>
-                    <p><strong>Pass Marks:</strong> 50%</p>
-                    <p><strong>Status:</strong> Upcoming</p>
-                </div>
+        <!-- LEVEL 1 -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f" alt="Basic photography practice">
+            <div class="card-content">
+                <h3>Level 1 – Basic Photography</h3>
+                <p>30 minutes · 25 MCQs</p>
+                <p>Exposure triangle, ISO, aperture, shutter speed.</p>
+                <p><strong>Fee:</strong> ₹199</p>
             </div>
         </div>
-    </div>
 
-    <!-- WORKFLOW -->
-    <div class="section">
-        <h2>Certification Workflow</h2>
-
-        <div class="workflow">
-            <div>Appear in Online Examination</div>
-            <div>Result & Certificate Code Issued</div>
-            <div>Preview Certificate (Watermarked)</div>
-            <div>Payment Confirmation</div>
-            <div>Download Final Certificate</div>
+        <!-- LEVEL 2 -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1499084732479-de2c02d45fc4" alt="Composition and lighting">
+            <div class="card-content">
+                <h3>Level 2 – Intermediate Composition & Lighting</h3>
+                <p>20 MCQs + 5 Short Answers (AI graded)</p>
+                <p>High/low key, framing, positive & negative space.</p>
+                <p><strong>Fee:</strong> ₹199</p>
+            </div>
         </div>
-    </div>
 
-    <!-- MOTTO -->
-    <div class="motto">
-        <p>
-            <strong>Our Motto</strong><br><br>
-            The Indian Photographic Society recognises photography not merely as a technical skill, but as an expressive
-            art and a social responsibility. We are committed to maintaining integrity in certification, protecting the
-            credibility of photographers, and promoting ethical artistic practices that contribute meaningfully to
-            society, culture, and visual documentation of our times.
-        </p>
-    </div>
+        <!-- LEVEL 3 -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475" alt="Professional photography workflow">
+            <div class="card-content">
+                <h3>Level 3 – Professional Photography Fundamentals</h3>
+                <p>Completion Certificate</p>
+                <p>Advanced MCQs + analytical short answers.</p>
+                <p><strong>Fee:</strong> ₹199 or ₹500 (all levels)</p>
+            </div>
+        </div>
 
-    <!-- FOOTER -->
-    <footer>
-        © Indian Photographic Society · All Rights Reserved<br>
-        Digitally verifiable certificates · Transparent evaluation · Professional integrity
-    </footer>
+        <!-- LEVEL 4 -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1608889175123-8ee5f5c7d6d0" alt="Indian Bengali wedding bride portrait">
+            <div class="card-content">
+                <h3>Level 4 – Certificate in Indian Wedding Photography</h3>
+                <p>Focused on Indian & Bengali wedding aesthetics.</p>
+                <p>Portraits, rituals, candid moments, lighting control.</p>
+                <p><strong>Fee:</strong> ₹300 (separate certification)</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    © Indian Photographic Society · All Rights Reserved<br>
+    Digitally verifiable · Transparent assessment · Professional integrity
+</footer>
 
 </body>
 </html>
