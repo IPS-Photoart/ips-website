@@ -1,9 +1,106 @@
-<h2>Preview Certificate</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Preview Certificate – Indian Photographic Society</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<p>Preview your certificate before final download.</p>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;600&display=swap" rel="stylesheet">
 
-<input type="text" id="code" placeholder="IPS-2026-000010">
-<button onclick="preview()">Preview</button>
+    <style>
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: 'Libre Franklin', Arial, sans-serif;
+}
+
+nav {
+    background-color: #0f2a44;
+    padding: 14px 0;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 16px;
+    font-size: 14px;
+}
+
+.banner {
+    background-image: url("assets/img/banner.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 240px;
+    color: #fff;
+}
+
+.banner-overlay {
+    background: rgba(0,0,0,0.55);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 40px;
+}
+
+.logo-section {
+    text-align: center;
+    margin: 30px 0 10px;
+}
+
+.logo-section img { width: 140px; }
+
+.section {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #0f2a44;
+    color: #fff;
+    border: none;
+}
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="course.html">Course Info</a>
+    <a href="verify.html">Verify Certificate</a>
+    <a href="preview.html">Preview Certificate</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<div class="banner">
+    <div class="banner-overlay">
+        <h1>Preview Certificate</h1>
+    </div>
+</div>
+
+<div class="logo-section">
+    <img src="assets/img/logo.png" alt="IPS Logo">
+</div>
+
+<div class="section">
+    <p>
+        Before making payment and downloading the final certificate, candidates may preview
+        their certificate in a watermarked format to verify name, level, and certificate details.
+    </p>
+
+    <input type="text" id="code" placeholder="IPS-2026-000010">
+    <button onclick="preview()">Preview Certificate</button>
+</div>
 
 <script>
 function preview() {
@@ -15,3 +112,6 @@ function preview() {
   );
 }
 </script>
+
+</body>
+</html>
