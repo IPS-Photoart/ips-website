@@ -22,9 +22,10 @@ nav {
 }
 
 nav a {
-    color: #fff;
+    color: #ffffff;
     margin: 0 16px;
     font-size: 14px;
+    font-weight: 500;
 }
 
 .banner {
@@ -32,7 +33,7 @@ nav a {
     background-size: cover;
     background-position: center;
     height: 240px;
-    color: #fff;
+    color: #ffffff;
 }
 
 .banner-overlay {
@@ -48,12 +49,36 @@ nav a {
     margin: 30px 0 10px;
 }
 
-.logo-section img { width: 140px; }
+.logo-section img {
+    width: 140px;
+}
 
 .section {
-    max-width: 800px;
+    max-width: 900px;
     margin: 40px auto;
     padding: 0 20px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 40px);
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.gallery img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+footer {
+    background-color: #0f2a44;
+    color: #ffffff;
+    padding: 25px;
+    text-align: center;
+    font-size: 13px;
+    margin-top: 60px;
 }
     </style>
 </head>
@@ -66,6 +91,7 @@ nav a {
     <a href="verify.html">Verify Certificate</a>
     <a href="preview.html">Preview Certificate</a>
     <a href="contact.html">Contact</a>
+    <a href="terms.html">Terms & Conditions</a>
 </nav>
 
 <div class="banner">
@@ -80,8 +106,8 @@ nav a {
 
 <div class="section">
     <p>
-        For queries related to certification programmes, examination rules, certificate verification,
-        or payment procedures, please contact the Indian Photographic Society through the channels below.
+        For any queries related to courses, examinations, certificates, verification,
+        or payments, please contact us using the details below.
     </p>
 
     <p>
@@ -90,10 +116,36 @@ nav a {
     </p>
 
     <p>
-        Indian Photographic Society<br>
-        Online Certification Platform
+        <strong>Facebook Pages:</strong><br>
+        <a href="https://www.facebook.com/indianphotographicsociety1/" target="_blank">
+            Indian Photographic Society
+        </a><br>
+        <a href="https://www.facebook.com/bharatiyaphotographicsociety/" target="_blank">
+            Bharatiya Photographic Society
+        </a>
     </p>
+
+    <h2>Our Community (Illustrative)</h2>
+    <p><em>Sample representation of our growing photography community.</em></p>
+
+    <div class="gallery">
+        <img src="https://i.pravatar.cc/40?img=1">
+        <img src="https://i.pravatar.cc/40?img=2">
+        <img src="https://i.pravatar.cc/40?img=3">
+        <img src="https://i.pravatar.cc/40?img=4">
+        <img src="https://i.pravatar.cc/40?img=5">
+        <img src="https://i.pravatar.cc/40?img=6">
+        <img src="https://i.pravatar.cc/40?img=7">
+        <img src="https://i.pravatar.cc/40?img=8">
+        <img src="https://i.pravatar.cc/40?img=9">
+        <img src="https://i.pravatar.cc/40?img=10">
+    </div>
 </div>
+
+<footer>
+    © Indian Photographic Society · All Rights Reserved<br>
+    Digitally verifiable certificates · Transparent evaluation · Professional integrity
+</footer>
 
 </body>
 </html>
