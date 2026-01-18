@@ -438,9 +438,18 @@ function goToCertificate(code) {
 
 document.addEventListener("DOMContentLoaded", loadCertificates);
 </script>
+<script>
+const params = new URLSearchParams(window.location.search);
+const CERTIFICATE_CODE = params.get("certificate");
+
+if (!CERTIFICATE_CODE) {
+  alert("No certificate selected");
+}
+</script>
 
 </body>
 </html>
+
 
 
 
