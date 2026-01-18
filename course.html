@@ -446,9 +446,89 @@ if (!CERTIFICATE_CODE) {
   alert("No certificate selected");
 }
 </script>
+<script>
+let examData = null;
+let remainingSeconds = 0;
+let timerInterval = null;
+
+async function loadExam() {
+  const res = await fetch(`${API_BASE}/exam/${CERTIFICATE_CODE}/questions`);
+  examData = await res.json();
+
+  document.getElementById("exam-title").innerText = examData.certificate;
+  document.getElementById("exam-duration").innerText =
+    `Duration: ${examData.duration_minutes} minutes`;
+
+  remainingSeconds = examData.duration_minutes * 60;
+  startTimer();
+
+  renderQuestions();
+}
+
+function startTimer() {
+  updateTimerText();
+  timerInterval = setInterval(() => {
+    remainingSeconds--;
+    updateTimerText();
+
+    if (remainingSeconds <= 0) {
+      clearInterval(timerInterval);
+      alert("Time is up. Exam will be submitted.");
+      document.getElementById("exam-form").requestSubmit();
+    }
+  }, 1000);
+}
+
+function updateTimerText() {
+  const mins = Math.floor(remainingSeconds / 60);
+  const secs = remainingSeconds % 60;
+  document.getElementById("exam-timer").innerText =
+    `Time Left: ${mins}:${secs.toString().padStart(2, "0")}`;
+}
+</script>
+<script>
+function renderQuestions() {
+  const area = document.getElementById("questions-area");
+  area.innerHTML = "";
+
+  if (!examData.questions || examData.questions.length === 0) {
+    area.innerHTML = "<p><em>Questions will appear here.</em></p>";
+    return;
+  }
+
+  examData.questions.forEach((q, index) => {
+    const block = document.createElement("div");
+    block.style.marginBottom = "20px";
+
+    let html = `<div><strong>Q${index + 1}. ${q.question}</strong></div>`;
+
+    q.options.forEach((opt, i) => {
+      html += `
+        <div>
+          <label>
+            <input type="radio" name="q_${q.id}" value="${i + 1}">
+            ${opt}
+          </label>
+        </div>`;
+    });
+
+    block.innerHTML = html;
+    area.appendChild(block);
+  });
+}
+</script>
+<script>
+document.getElementById("exam-form").addEventListener("submit", function (e) {
+  e.preventDefault();
+  clearInterval(timerInterval);
+
+  alert("Exam submitted successfully (submission logic will be added next).");
+});
+</script>
 
 </body>
 </html>
+
 
 
 
