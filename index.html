@@ -384,6 +384,27 @@ footer {
 </footer>
 <script>
 const API_BASE = "https://ips-fastapi-backend.onrender.com";
+
+async function loadCertificates() {
+  const res = await fetch(`${API_BASE}/certificates`);
+  const certs = await res.json();
+
+  document.querySelectorAll(".certificate-dropdown").forEach(select => {
+    certs.forEach(cert => {
+      const option = document.createElement("option");
+      option.value = cert.code;
+      option.textContent = cert.title;
+      select.appendChild(option);
+    });
+  });
+}
+
+function goToCertificate(code) {
+  if (!code) return;
+  window.location.href = `course.html?certificate=${code}`;
+}
+
+document.addEventListener("DOMContentLoaded", loadCertificates);
 </script>
 
 </body>
