@@ -177,27 +177,40 @@ function renderQuestions(){
 
 <!-- SUBMIT -->
 <script>
-document.getElementById("exam-form").addEventListener("submit",function(e){
+document.getElementById("exam-form").addEventListener("submit", async function (e) {
   e.preventDefault();
   clearInterval(timerInterval);
 
-  const answers=[];
-  if(examData && examData.questions){
-    examData.questions.forEach(q=>{
-      const sel=document.querySelector(
-        `input[name="q_${q.id}"]:checked`
-      );
-      answers.push({
-        question_id:q.id,
-        selected_option:sel?sel.value:null
-      });
-    });
-  }
+  const answers = [];
 
-  console.log("Submitted answers:",answers);
-  alert("Exam submitted successfully. Answers captured.");
+  examData.questions.forEach(q => {
+    const selected = document.querySelector(
+      `input[name="q_${q.id}"]:checked`
+    );
+
+    answers.push({
+      question_id: q.id,
+      selected_option: selected ? parseInt(selected.value) : null
+    });
+  });
+
+  const res = await fetch(`${API_BASE}/exam/${CERTIFICATE_CODE}/submit`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ answers })
+  });
+
+  const result = await res.json();
+
+  alert(
+    `Result: ${result.result}\n` +
+    `Score: ${result.marks_obtained}/${result.total_marks}\n` +
+    `Percentage: ${result.percentage}%`
+  );
 });
 </script>
 
+
 </body>
 </html>
+
